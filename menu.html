@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="vi-en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Swebi Coffee</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+            color: #01579b;
+            min-height: 500vh;
+            position: relative;
+        }
+
+        header {
+            background-color: #0288d1;
+            padding: 20px;
+            text-align: left;
+            color: white;
+            font-size: 24px;
+            padding-left: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #0277bd;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .menu {
+            margin-top: 30px;
+        }
+
+        .menu h2 {
+            color: #d32f2f;
+        }
+
+        .menu-category {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #0288d1;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #0288d1;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .menu-item button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .auth-container {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .auth {
+            background-color: #ffcc00;
+            color: #01579b;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+
+        .auth:hover {
+            background-color: #ffeb3b;
+        }
+
+        .contact {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #01579b;
+            color: white;
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #1973da;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 200px;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .product h3 {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .price {
+            font-weight: bold;
+            color: #009900;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #056e01;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #78ceda;
+        }
+        .best-seller {
+            background: red;
+            color: white;
+            font-size: 12px;
+            padding: 3px 8px;
+            border-radius: 5px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .must-try {
+            background: red;
+            color: white;
+            font-size: 12px;
+            padding: 3px 8px;
+            border-radius: 5px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .product-wrapper {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Swebi Coffee</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="products.html">Sản phẩm</a></li>
+            <li><a href="orders.html">Đơn hàng</a></li>
+            <li><a href="loyalty.html">Thành viên</a></li>
+            <li><a href="promotions.html">Khuyến mãi</a></li>
+            <li><a href="careers.html">Tuyển dụng</a></li>
+        </ul>
+
+        
+        <div class="auth-container">
+            <button class="auth" onclick="location.href='login.html'">Đăng nhập</button>
+            <div class="language-selector">
+                <select id="language-select" onchange="changeLanguage()">
+                    <option value="vi"> Tiếng Việt</option>
+                    <option value="en"> English</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>COFFEE</h2>
+        <div class="product-list">
+            <div class="product">
+                <div class="product-wrapper">
+                    <img src="https://i.pinimg.com/736x/cb/a7/21/cba721e6bea4df78369d8332385c635b.jpg" alt="Black Coffee ">
+                </div>
+                <h3>Black Coffee</h3>
+                <p class="price">29.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+            <div class="product">
+                <div class="product-wrapper">
+                    <img src="https://i.pinimg.com/736x/35/9f/c1/359fc15a59e47967f1e95305c7ae194e.jpg" alt="Milk Coffee ">
+                </div>
+                <h3>Milk Coffee</h3>
+                <p class="price">30.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+            <div class="product">
+                <div class="product-wrapper">
+                    <img src="https://i.pinimg.com/736x/c9/8d/04/c98d046bf1085bc59f77893bf9779244.jpg" alt="Espresso ">
+                </div>
+                <h3>Espresso </h3>
+                <p class="price">45.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+            <div class="product">
+                <div class="product-wrapper">
+                    <span class="must-try">Must Try </span>
+                    <img src="https://i.pinimg.com/736x/39/35/d7/3935d7a96e33f58d5ff217963304ce52.jpg" alt="Latte ">
+                </div>
+                <h3>Latte </h3>
+                <p class="price">45.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+            <div class="product">
+                <div class="product-wrapper">
+                    <span class="must-try">Must Try </span>
+                    <img src="https://i.pinimg.com/736x/5a/a7/d8/5aa7d84d74e54c07c0414837404cd65c.jpg" alt="Mocha ">
+                </div>
+                <h3>Mocha </h3>
+                <p class="price">45.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+            <div class="product">
+                <div class="product-wrapper">
+                    <span class="must-try">Must Try </span>
+                    <img src="https://i.pinimg.com/736x/25/83/4c/25834c395d25af2355f04173b56796ab.jpg" alt="Cappucchino">
+                </div>
+                <h3>Cappucchino</h3>
+                <p class="price">50.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+            <div class="product">
+                <div class="product-wrapper">
+                    <span class="must-try">Must Try </span>
+                    <img src="https://i.pinimg.com/736x/10/ca/b1/10cab17083f37bb174f5defba0144195.jpg" alt="Caramel Macchiato">
+                </div>
+                <h3>Caramel Macchiato</h3>
+                <p class="price">50.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>TRÀ THƠM CHẤT LƯỢNG </h2>
+        <div class="product-list">
+            <div class="product">
+                <div class="product-wrapper">
+                    <span class="must-try">Must Try </span>
+                    <img src="https://via.placeholder.com/150" alt="Trà Sen Long Nhãn">
+                </div>
+                <h3>Trà Sen Long Nhãn (L)</h3>
+                <p class="price">50.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+            <div class="product">
+                <div class="product-wrapper">
+                    <img src="https://via.placeholder.com/150" alt="Trà Xí Muội">
+                </div>
+                <h3>Trà Xí Muội (L)</h3>
+                <p class="price">45.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+            <div class="product">
+                <div class="product-wrapper">
+                    <img src="https://via.placeholder.com/150" alt="Trà Lài Tắc Mật Ong">
+                </div>
+                <h3>Trà Lài Tắc Mật Ong (L)</h3>
+                <p class="price">45.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+            <div class="product">
+                <div class="product-wrapper">
+                    <img src="https://via.placeholder.com/150" alt="Trà Lài Đác Thơm">
+                </div>
+                <h3>Trà Lài Đác Thơm (L)</h3>
+                <p class="price">55.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+            <div class="product">
+                <div class="product-wrapper">
+                    <span class="best-seller">Best Seller</span>
+                    <img src="https://via.placeholder.com/150" alt="Trà Ôlong Dâu">
+                </div>
+                <h3>Trà Ôlong Dâu (L)</h3>
+                <p class="price">55.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+            <div class="product">
+                <div class="product-wrapper">
+                    <img src="https://via.placeholder.com/150" alt="Trà Mận">
+                </div>
+                <h3>Trà Mận (L)</h3>
+                <p class="price">50.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+            <div class="product">
+                <div class="product-wrapper">
+                    <img src="https://via.placeholder.com/150" alt="Trà Vải">
+                </div>
+                <h3>Trà Vải (L)</h3>
+                <p class="price">50.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+            <div class="product">
+                <div class="product-wrapper">
+                    <img src="https://via.placeholder.com/150" alt="Trà Đào ">
+                </div>
+                <h3>Trà Đào (L)</h3>
+                <p class="price">50.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        <h2>TRÀ SỮA </h2>
+        <div class="product-list">
+            <div class="product">
+                <div class="product-wrapper">
+                    <span class="must-try">Must Try </span>
+                    <img src="https://i.pinimg.com/736x/1d/cf/72/1dcf72fca6d5a4f44cc8fa3501bcd575.jpg" alt="Trà Sữa Swebi ">
+                </div>
+                <h3>Trà Sữa Swebi(L)</h3>
+                <p class="price">55.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+            <div class="product">
+                <div class="product-wrapper">
+                    <span class="best-seller">Best Seller</span>
+                    <img src="https://i.pinimg.com/736x/ee/c9/32/eec9321c4705a7fc8da3f8ade411aa60.jpg" alt="Trà Sữa Nhài Khoai Môn ">
+                </div>
+                <h3>Trà Sữa Nhài Khoai Môn(L)</h3>
+                <p class="price">60.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+            <div class="product">
+                <div class="product-wrapper">
+                    <img src="https://via.placeholder.com/150" alt="Trà Sữa Hạt Sen ">
+                </div>
+                <h3>Trà Sữa Hạt Sen(L)</h3>
+                <p class="price">55.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+            <div class="product">
+                <div class="product-wrapper">
+                    <img src="https://via.placeholder.com/150" alt="Trà Sữa Bá Tước ">
+                </div>
+                <h3>Trà Sữa Bá Tước(L)</h3>
+                <p class="price">55.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+            <div class="product">
+                <div class="product-wrapper">
+                    <img src="https://via.placeholder.com/150" alt="Trà Sữa Lài">
+                </div>
+                <h3>Trà Sữa Lài(L)</h3>
+                <p class="price">50.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+            <div class="product">
+                <div class="product-wrapper">
+                    <img src="https://via.placeholder.com/150" alt="Trà Sữa Socola">
+                </div>
+                <h3>Trà Sữa Socola(L)</h3>
+                <p class="price">50.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+            <div class="product">
+                <div class="product-wrapper">
+                    <img src="https://via.placeholder.com/150" alt="Trà Sữa Ôlong">
+                </div>
+                <h3>Trà Sữa Ôlong(L)</h3>
+                <p class="price">50.000 đ</p>
+                <a href="#" class="btn">🛒 Đặt mua</a>
+            </div>
+        </div>
+    </div>
+
+<div class="container">
+    <h2>ICE BLEND </h2>
+    <div class="product-list">
+        <div class="product">
+            <div class="product-wrapper">
+                <img src="https://via.placeholder.com/150" alt="Cookie N Cream ">
+            </div>
+            <h3>Cookie N Cream</h3>
+            <p class="price">65.000 đ</p>
+            <a href="#" class="btn">🛒 Đặt mua</a>
+        </div>
+        <div class="product">
+            <div class="product-wrapper">
+                <img src="https://via.placeholder.com/150" alt="Mint Chocolate ">
+            </div>
+            <h3>Mint Chocolate</h3>
+            <p class="price">65.000 đ</p>
+            <a href="#" class="btn">🛒 Đặt mua</a>
+        </div>
+        <div class="product">
+            <div class="product-wrapper">
+                <img src="https://via.placeholder.com/150" alt="Chocolate Blended ">
+            </div>
+            <h3>Chocolate Blended </h3>
+            <p class="price">65.000 đ</p>
+            <a href="#" class="btn">🛒 Đặt mua</a>
+        </div>
+        <div class="product">
+            <div class="product-wrapper">
+                <span class="must-try">Must Try </span>
+                <img src="https://via.placeholder.com/150" alt="Passion Mango">
+            </div>
+            <h3>Passion Mango</h3>
+            <p class="price">65.000 đ</p>
+            <a href="#" class="btn">🛒 Đặt mua</a>
+        </div>
+        <div class="product">
+            <div class="product-wrapper">
+                <span class="must-try">Must Try </span>
+                <img src="https://via.placeholder.com/150" alt="Wondermelon">
+            </div>
+            <h3>Wondermelon</h3>
+            <p class="price">65.000 đ</p>
+            <a href="#" class="btn">🛒 Đặt mua</a>
+        </div>
+    </div>
+</div>
+
+        </section>
+    </div>
+    <footer class="contact">
+        <p data-lang="contact">Liên hệ: 028 6686 2559 | Email: swebicoffee@gmail.com</p>
+        <p data-lang="address">Địa chỉ: 250 (Góc đường số 13) Tên Lửa, Bình Trị Đông B, Bình Tân, Thành phố Hồ Chí Minh , Việt Nam</p>
+    </footer>
+</body>
+</html>
